@@ -5,6 +5,7 @@ import com.dicoding.picodiploma.mynotesapp.db.DatabaseContract
 import com.dicoding.picodiploma.mynotesapp.entity.Note
 import java.util.*
 
+
 object MappingHelper {
 
     fun mapCursorToArrayList(notesCursor: Cursor?): ArrayList<Note> {

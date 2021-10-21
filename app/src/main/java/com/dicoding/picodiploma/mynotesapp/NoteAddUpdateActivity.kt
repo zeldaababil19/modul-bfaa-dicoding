@@ -161,12 +161,6 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         showAlertDialog(ALERT_DIALOG_CLOSE)
     }
 
-
-    /*
-    Konfirmasi dialog sebelum proses batal atau hapus
-    close = 10
-    deleteNote = 20
-     */
     private fun showAlertDialog(type: Int) {
         val isDialogClose = type == ALERT_DIALOG_CLOSE
         val dialogTitle: String
@@ -204,6 +198,7 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                     }
                 }
             }
+
             .setNegativeButton("Tidak") { dialog, _ -> dialog.cancel() }
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
