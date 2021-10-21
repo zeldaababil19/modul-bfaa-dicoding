@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.data != null) {
-            // Akan dipanggil jika request codenya ADD
             when (result.resultCode) {
                 NoteAddUpdateActivity.RESULT_ADD -> {
                     val note =
@@ -121,17 +120,10 @@ class MainActivity : AppCompatActivity() {
         outState.putParcelableArrayList(EXTRA_STATE, adapter.listNotes)
     }
 
-    /**
-     * Tampilkan snackbar
-     *
-     * @param message inputan message
-     */
     private fun showSnackbarMessage(message: String) {
         Snackbar.make(binding.rvNotes, message, Snackbar.LENGTH_SHORT).show()
     }
 }
-
-
 
 
 //class MainActivity : AppCompatActivity() {
